@@ -135,5 +135,23 @@ git push heroku master
 ```
 
 ## Test Deployed API Endpoints
-- https://java-api-demo.herokuapp.com/api/hello
-- https://java-api-demo.herokuapp.com/api/aliens
+- https://knime-workflow-api.herokuapp.com/api/workflow
+- https://knime-workflow-api.herokuapp.com/api/workflow/info
+
+
+- POST Request
+Endpoint: https://knime-workflow-api.herokuapp.com/api/workflow/
+1. Set Request Body
+Example Request Body (Raw)
+```json
+{
+    "columnFilter": "Country",
+    "fileType": "csv",
+    "outputFormat": "csv",
+    "rowFilter": "United Kingdom"
+}
+```
+
+2. Set Header properties
+- Content-Type : application/JSON
+- Accept application.JSON
