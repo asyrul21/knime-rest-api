@@ -146,9 +146,14 @@ Example Request Body (Raw)
 ```json
 {
     "columnFilter": "Country",
+    "columns": [
+        "Country",
+        "City",
+        "State"
+    ],
     "fileType": "csv",
     "outputFormat": "csv",
-    "rowFilter": "United Kingdom"
+    "rowFilter": "Malaysia"
 }
 ```
 

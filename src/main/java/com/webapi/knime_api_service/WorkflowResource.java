@@ -1,5 +1,8 @@
 package com.webapi.knime_api_service;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
@@ -31,18 +34,24 @@ public class WorkflowResource {
 		wi.setColumnFilter("Country");
 		wi.setRowFilter("United Kingdom");
 		wi.setOutputFormat("csv");
-		
+		wi.setColumns(Arrays.asList("Country", "City", "State"));
 		
         return wi;
     }
 	
 	@POST
+	@Path("info")
     @Consumes(MediaType.APPLICATION_JSON)
 	// http://localhost:8080/knime-api-service/api/workflow/
 	/*  Make sure to set you 1) Request Body (RAW) :
 	 * {
 		    "columnFilter": "Country",
 		    "fileType": "csv",
+		     "columns": [
+		        "Country",
+		        "City",
+		        "State"
+		    ],
 		    "outputFormat": "csv",
 		    "rowFilter": "United Kingdom"
 		}                            
@@ -50,7 +59,6 @@ public class WorkflowResource {
 	* 2) set your headers properties (Content-Type and Accept) both to application/json
 	*
 	*/
-	
     public WorkflowInformation sendInformation(WorkflowInformation wi) {
 		
 		System.out.println("A POST request submitted with Raw Request Body:");
