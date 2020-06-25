@@ -160,3 +160,13 @@ Example Request Body (Raw)
 2. Set Header properties
 - Content-Type : application/JSON
 - Accept application.JSON
+
+# References
+
+https://stackoverflow.com/questions/37762877/pass-list-of-strings-to-java-method
+
+You may encounter this error:
+
+java.lang.ClassNotFoundException: org.glassfish.jersey.servlet.ServletContainer
+
+Solution: https://howtodoinjava.com/jersey/solved-java-lang-classnotfoundexception-org-glassfish-jersey-servlet-servletcontainer/
